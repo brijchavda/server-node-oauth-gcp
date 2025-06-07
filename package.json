@@ -4,12 +4,12 @@
 	"description": "",
 	"main": "index.js",
 	"engines": {
-		"node": "18.x"
+		"node": "20.x"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"serve": "node index.js",
-		"deploy": "gcloud functions deploy api --trigger-http --runtime=nodejs18",
+		"deploy": "gcloud functions deploy api --gen2 --trigger-http --runtime=nodejs20 --allow-unauthenticated --region=us-west1",
 		"start": "npx functions-framework --target=api --signature-type=http",
 		"dev": "npx functions-framework --target=api --signature-type=http --port=8081"
 	},
